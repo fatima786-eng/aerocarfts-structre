@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-50">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UR Aerotech</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+<!-- Logo -->
+<div class="flex flex-col items-start">
+<div class="flex items-center space-x-2">
+<img src="image/aircartfs.jpeg" class="h-10">
+<span class="text-blue-700 font-bold text-xl">UR Aerotech</span>
+</div>
+<span class="text-gray-500 text-sm mt-1">AIRCRAFT STRUCTURE REPAIR</span>
+</div>
+
+<!-- Links -->
+<ul class="hidden md:flex space-x-6 font-medium text-gray-700 items-center">
+
+<li><a href="#home" class="hover:text-blue-700">Home</a></li>
+<li><a href="#solutions" class="hover:text-blue-700">Solutions</a></li>
+<li><a href="#industries" class="hover:text-blue-700">Industries</a></li>
+
+<!-- Dropdown -->
+<li class="relative group">
+<button class="flex items-center hover:text-blue-700">
+Products
+<svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+<path fill-rule="evenodd"
+d="M5.23 7.21a.75.75 0 011.06 0L10 10.91l3.71-3.7a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z"/>
+</svg>
+</button>
+
+<ul class="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded w-48">
+<li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Avionics</a></li>
+<li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Landing Gear</a></li>
+<li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Hydraulic</a></li>
+</ul>
+</li>
+
+<li><a href="#" class="hover:text-blue-700">About</a></li>
+<li><a href="#" class="hover:text-blue-700">Contact</a></li>
+
+<!-- Buttons -->
+<li>
+<button onclick="openModal()" class="ml-4 bg-gray-100 px-6 py-2 rounded-full hover:bg-gray-200">
+Sign In
+</button>
+</li>
+
+<li>
+<button class="ml-2 bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800">
+Request a Quote
+</button>
+</li>
+
+</ul>
+
+</div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="relative w-full h-[90vh]">
+
+<img src="image/home img.jpg"
+class="absolute inset-0 w-full h-full object-cover brightness-75">
+
+<div class="relative z-10 flex flex-col justify-center h-full container mx-auto px-6 text-white">
+
+<h1 class="text-5xl font-bold mb-4">
+AIRCRAFT STRUCTURE REPAIR
+</h1>
+
+<p class="text-xl mb-6">
+Delivering high-quality aviation solutions
+</p>
+
+<div class="flex space-x-4">
+
+<button class="bg-blue-700 px-6 py-3 rounded-full hover:bg-blue-800">
+Request a Quote
+</button>
+
+<button onclick="openModal()" class="bg-gray-100 text-gray-800 px-6 py-3 rounded-full">
+Sign In
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- Solutions -->
+<section id="solutions" class="py-16">
+<div class="container mx-auto px-6">
+
+<h2 class="text-4xl font-bold text-center mb-12">
+Our Solutions
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+<!-- Card -->
+<div class="bg-white shadow-md rounded-xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition">
+<img src="image/airoplan.jpg" class="h-16 mx-auto mb-4">
+<h3 class="text-xl font-semibold mb-2">Avionics</h3>
+<p class="text-gray-600">
+Advanced avionics and aircraft electronic systems.
+</p>
+</div>
+
+<div class="bg-white shadow-md rounded-xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition">
+<img src="image/aircartfs.jpeg" class="h-16 mx-auto mb-4">
+<h3 class="text-xl font-semibold mb-2">Landing Gear</h3>
+<p class="text-gray-600">
+Reliable landing gear support and solutions.
+</p>
+</div>
+
+<div class="bg-white shadow-md rounded-xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition">
+<img src="image/tools.jpg" class="h-16 mx-auto mb-4">
+<h3 class="text-xl font-semibold mb-2">Hydraulic Systems</h3>
+<p class="text-gray-600">
+Aircraft hydraulic maintenance services.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- Login Modal -->
+<div id="loginModal"
+class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+
+<div class="bg-white p-8 rounded-xl w-96 relative">
+
+<button onclick="closeModal()" class="absolute top-3 right-3 text-xl">✕</button>
+
+<h2 class="text-2xl font-bold mb-6 text-center">Sign In</h2>
+
+<form class="space-y-4">
+
+<input type="email" placeholder="Email"
+class="w-full border px-4 py-2 rounded-lg">
+
+<input type="password" placeholder="Password"
+class="w-full border px-4 py-2 rounded-lg">
+
+<button class="w-full bg-blue-700 text-white py-2 rounded-full">
+Login
+</button>
+
+</form>
+
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+
+<div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+<div>
+<h3 class="text-white text-xl mb-4">UR Aerotech</h3>
+<p>
+Aircraft repair and aviation solutions provider.
+</p>
+</div>
+
+<div>
+<h3 class="text-white text-xl mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#home">Home</a></li>
+<li><a href="#solutions">Solutions</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+
+<div>
+<h3 class="text-white text-xl mb-4">Contact</h3>
+<p>Email: info@uraerotech.com</p>
+<p>Phone: +1 234 567 890</p>
+</div>
+
+</div>
+
+<div class="text-center text-gray-500 mt-8">
+© 2026 UR Aerotech
+</div>
+
+</footer>
+
+
+<!-- Scripts -->
+<script>
+
+function openModal(){
+document.getElementById("loginModal").classList.remove("hidden");
+document.getElementById("loginModal").classList.add("flex");
+}
+
+function closeModal(){
+document.getElementById("loginModal").classList.remove("flex");
+document.getElementById("loginModal").classList.add("hidden");
+}
+
+</script>
+
+</body>
+</html>
